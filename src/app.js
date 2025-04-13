@@ -1,0 +1,10 @@
+const express = require('express');
+const todoRouter =require('./routes/todo'); 
+const app = express();
+const port = 3000;
+
+app.use('/todo',todoRouter);
+
+app.listen(port, ()=>{
+  console.log(`server is running on http://localhost:${port}`);
+});
